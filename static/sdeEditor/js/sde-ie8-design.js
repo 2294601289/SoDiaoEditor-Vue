@@ -3,15 +3,21 @@
  * author: tlzzu@outlook.com 
  * createtime: Mon, 08 Apr 2019 07:15:33 GMT
  */
+// 自执行函数
 !function (e) {
+  // 公共函数在下面484个函数中就是函数n
   function t(r) {
     if (n[r]) return n[r].exports;
     var i = n[r] = {i: r, l: !1, exports: {}};
     return e[r].call(i.exports, i, i.exports, t), i.l = !0, i.exports
   }
-
+  // 定义变量对象n
   var n = {};
   t.m = e, t.c = n, t.d = function (e, n, r) {
+    // Object.defineProperty 需要三个参数（object , propName , descriptor）
+    // 1 object 对象 => 给谁加
+    // 2 propName 属性名 => 要加的属性的名字 【类型：String】
+    // 3 descriptor 属性描述 => 加的这个属性有什么样的特性【类型：Object】{value：属性值，writable：设置只读，enumerable：设置枚举，configurable：是否可删除和重新定义，get：取函数}
     t.o(e, n) || Object.defineProperty(e, n, {configurable: !1, enumerable: !0, get: r})
   }, t.n = function (e) {
     var n = e && e.__esModule ? function () {
@@ -21,6 +27,9 @@
     };
     return t.d(n, "a", n), n
   }, t.o = function (e, t) {
+    // Object.prototype.hasOwnProperty.call(object , propName ) 判断一个属性是定义在对象本身而不是继承自原型链
+    // 1 object 对象 => 谁加的
+    // 2 propName 属性名 => 加的属性的名字 【类型：String】
     return Object.prototype.hasOwnProperty.call(e, t)
   }, t.p = "", t(t.s = 293)
 }([function (e, t, n) {
@@ -14004,7 +14013,7 @@
     function e(t) {
       (0, i["default"])(this, e), this[A.kernel] = t, t.isde = this
     }
-
+    // TODO: sde.addListener
     return e.prototype.addListener = function (e, t) {
       if (this[A.kernel].addListener) return this[A.kernel].addListener(e, t);
       a("addListener 不存在！")
@@ -15515,11 +15524,10 @@
   }).call(t, n(10))
 }, , , function (e, t, n) {
   "use strict";
-
   function r(e) {
     return e && e.__esModule ? e : {"default": e}
   }
-
+  // TODO: 293 new SDE
   var i = n(7), A = r(i), a = n(19), o = r(a), s = n(21), l = r(s), d = n(241), u = r(d), c = n(294), f = r(c),
     h = n(401), m = r(h), p = n(402), g = r(p), w = n(3), B = r(w), y = n(4);
   n(474), n(476), n(478), n(480), n(482), n(483), n(272);
@@ -16802,7 +16810,8 @@
         var t = e.queryCommandState(a);
         return n && 1 === t ? A["default"].addClass(n, "ctrl-selected") : A["default"].removeClasses(n, "ctrl-selected"), -1 !== t
       }, function (e) {
-        e.execCommand(a)
+        // 编辑器组件上下标相反
+        e.execCommand('superscript')
       }, !0);
       return n
     }
@@ -16866,7 +16875,8 @@
         var t = e.queryCommandState(a);
         return n && 1 === t ? A["default"].addClass(n, "ctrl-selected") : A["default"].removeClasses(n, "ctrl-selected"), -1 !== t
       }, function (e) {
-        e.execCommand(a)
+        // 编辑器组件上下标相反
+        e.execCommand('subscript')
       }, !0);
       return n
     }
@@ -17811,7 +17821,7 @@
   function r(e) {
     return e && e.__esModule ? e : {"default": e}
   }
-
+  // TODO: 402
   var i = n(403), A = r(i), a = n(404), o = r(a), s = n(405), l = r(s), d = n(406), u = r(d), c = n(407), f = r(c),
     h = n(408), m = r(h), p = n(409), g = r(p), w = n(461), B = r(w), y = n(462), v = r(y), b = n(463), _ = r(b),
     M = n(464), C = r(M), E = n(465), L = r(E), Q = n(466), x = r(Q), k = n(467), U = r(k), D = n(468), Y = r(D),

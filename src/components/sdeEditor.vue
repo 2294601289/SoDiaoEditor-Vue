@@ -1,89 +1,69 @@
 <template>
   <div class="sde-root">
     <div ref="editor" :style="{ width:width, height:height }" style="box-shadow: 0 0 0 1px #d1d1d1, 0 0 3px 1px #ccc;">
-      <p>adfa打发sfadsf阿sfadsf阿斯dfa
-        <span class="sde-ctrl" sde-type="text" sde-right="." id="abc1"
-              sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22verify%22%3A%22%5E%5B0-9%5D*%24%22%2C%22required%22%3A0%2C%22desc%22%3A%22%E6%95%B4%E6%95%B0%E6%8E%A7%E4%BB%B6%22%2C%22remotedata%22%3A%7B%22url%22%3A%22%2Fdata%2Fjson1.json%22%2C%22method%22%3A%22get%22%2C%22data%22%3A%7B%22name%22%3A%22tl%22%7D%7D%7D"
-              contenteditable="false"><span class="sde-value" sde-left="[" sde-right="]"
-                                            contenteditable="true">整数控件</span>
-        </span>
-        sd啊斯顿发打发斯蒂芬
-        <span class="sde-ctrl" sde-value='[{ "label": "男", "value": 1 }]' sde-type="select"
-              sde-updatetime="2018-5-3 14:13:02" sde-right="." id="abc-select"
-              sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22multi%22%3A0%2C%22desc%22%3A%22%E6%80%A7%E5%88%AB%22%2C%22bindingdata%22%3A%5B%5D%2C%22remotedata%22%3A%7B%22url%22%3A%22%2Fdata%2Fsex.json%22%2C%22method%22%3A%22get%22%2C%22headers%22%3A%7B%7D%2C%22data%22%3A%7B%7D%7D%7D"
-              contenteditable="false"><span class="sde-value" sde-left="[" sde-right="]"
-                                            contenteditable="false">性别</span></span>sd啊打爱的发的蒂芬
-        <span class="sde-ctrl" bindingdata='[{ "label": "感觉很好", "value": 1 }, { "label": "感觉一般", "value": 2 }]'
-              sde-value='[{ "label": "感觉很好", "value": 1 }, { "label": "感觉一般", "value": 2 }]' sde-type="select"
-              sde-updatetime="2018-5-3 14:13:02" sde-right="." id="abc-select1"
-              sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22multi%22%3A1%2C%22desc%22%3A%22%E6%84%9F%E8%A7%89%22%2C%22bindingdata%22%3A%5B%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E5%BE%88%E5%A5%BD%22%2C%20%22value%22%3A%201%20%7D%2C%20%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E4%B8%80%E8%88%AC%22%2C%20%22value%22%3A%202%20%7D%5D%7D"
-              contenteditable="false"><span class="sde-value" sde-left="[" sde-right="]"
-                                            contenteditable="false">感觉</span></span>sd啊打发sf</p>
-      <p>开始时间：<span class="sde-ctrl" id="kssj" sde-type="date"
-                    sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22desc%22%3A%22%22%2C%22defvalue%22%3A%222018-5-7%2016%3A08%3A09%22%2C%22format%22%3A%22%7Byyyy%7D-%7BMM%7D-%7Bdd%7D%20%7Bhh%7D%3A%7Bmm%7D%3A%7Bss%7D%22%2C%22min%22%3A%22%22%2C%22max%22%3A%22%22%7D"><span
-        class="sde-value" contenteditable="true" sde-left="[" sde-right="]">开始时间</span></span>阿打发打
-        结束时间：
-        <span class="sde-ctrl" id="jssj" sde-type="date"
-              sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22desc%22%3A%22%22%2C%22defvalue%22%3A%222018-5-7%2016%3A08%3A09%22%2C%22format%22%3A%22%7Byyyy%7D-%7BMM%7D-%7Bdd%7D%20%7Bhh%7D%3A%7Bmm%7D%3A%7Bss%7D%22%2C%22min%22%3A%222018-4-7%2016%3A08%3A09%22%2C%22max%22%3A%222018-5-17%2016%3A08%3A09%22%7D"><span
-          class="sde-value" contenteditable="true" sde-left="[" sde-right="]">结束时间</span></span>阿打发打
-        发随意 <span id="gj" sde-right="." sde-type="checkbox" class="sde-ctrl"
-                  sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22multi%22%3A1%2C%22desc%22%3A%22%E6%84%9F%E8%A7%89%22%2C%22bindingdata%22%3A%5B%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E5%BE%88%E5%A5%BD%22%2C%20%22value%22%3A%201%20%7D%2C%20%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E4%B8%80%E8%88%AC%22%2C%20%22value%22%3A%202%20%7D%5D%7D"
-                  bindingdata='[{ "label": "感觉很好", "value": 1 }, { "label": "感觉一般", "value": 2 }]'
-                  contenteditable="false"><span contenteditable="true" sde-left="[" sde-right="]"
-                                                class="sde-value"><label contenteditable="false"><input type="checkbox"
-                                                                                                        value='{ "label": "感觉很好", "value": 1 }'>感觉很好</label>
-        <label contenteditable="false"><input type="checkbox" value='{ "label": "感觉一般", "value": 2 }'>感觉一般</label>
-      </span></span>时间：
-        <span class="sde-ctrl" id="sysj" sde-type="date"
-              sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22desc%22%3A%22%22%2C%22defvalue%22%3A%222018-5-7%2016%3A08%3A09%22%2C%22format%22%3A%22%7Byyyy%7D%E5%B9%B4%7BMM%7D-%7Bdd%7D%20%7Bhh%7D%3A%7Bmm%7D%3A%7Bss%7D%22%2C%22min%22%3A%222018-4-7%2016%3A08%3A09%22%2C%22max%22%3A%222018-5-17%2016%3A08%3A09%22%7D"><span
-          class="sde-value" contenteditable="true" sde-left="[" sde-right="]">结束时间</span></span>阿打发打
-        发
-        <label sde-type="label" class="sde-ctrl sde-label" id="label1">labellabellabel</label>俺的沙发
-      <table class="tb-dotted">
+      <p style="text-align: center;"><span style="font-size: 24px;">XXX医院</span></p>
+      <table class="sde-table">
         <tbody>
-        <tr>
-          <td>1</td>
-          <td>2</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>4</td>
+        <tr class="firstRow">
+          <td width="80" valign="top" style="border-bottom: 1px solid black; word-break: break-all;" align="right">
+            住院号：
+          </td>
+          <td width="80" valign="top" style="border-bottom: 1px solid black; word-break: break-all;"><span
+            class="sde-ctrl" contenteditable="false" id="zyh" sde-type="text" sde-right="."
+            sde-model="%7B%22desc%22%3A%22%E4%BD%8F%E9%99%A2%E5%8F%B7%22%2C%22required%22%3A0%2C%22strictverify%22%3A0%2C%22notdel%22%3A0%2C%22verify%22%3A%22%22%2C%22mode%22%3A%22EDITOR%22%7D"><span
+            class="sde-value" contenteditable="true" sde-left="[" sde-right="]" title="住院号">住院号</span></span></td>
+          <td width="80" valign="top" style="border-bottom: 1px solid black; word-break: break-all;" align="right">姓名：
+          </td>
+          <td width="80" valign="top" style="border-bottom: 1px solid black; word-break: break-all;"><span
+            class="sde-ctrl" contenteditable="false" id="xm" sde-type="text" sde-right="."
+            sde-model="%7B%22desc%22%3A%22%E5%A7%93%E5%90%8D%22%2C%22required%22%3A0%2C%22strictverify%22%3A0%2C%22notdel%22%3A0%2C%22verify%22%3A%22%22%2C%22mode%22%3A%22EDITOR%22%7D"><span
+            class="sde-value" contenteditable="true" sde-left="[" sde-right="]" title="姓名">姓名</span></span></td>
+          <td width="80" valign="top" style="border-bottom: 1px solid black; word-break: break-all;" align="right">科室：
+          </td>
+          <td width="80" valign="top" style=";border-bottom:1px solid black;"><span class="sde-ctrl"
+                                                                                    contenteditable="false" id="ks"
+                                                                                    sde-type="text" sde-right="."
+                                                                                    sde-model="%7B%22desc%22%3A%22%E7%A7%91%E5%AE%A4%22%2C%22required%22%3A0%2C%22strictverify%22%3A0%2C%22notdel%22%3A0%2C%22verify%22%3A%22%22%2C%22mode%22%3A%22EDITOR%22%7D"><span
+            class="sde-value" contenteditable="true" sde-left="[" sde-right="]" title="科室">科室</span></span></td>
         </tr>
         </tbody>
       </table>
-      adfa打发s 非异步：
-      <span id="gj" sde-right="." sde-type="radio" class="sde-ctrl"
-            sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22multi%22%3A1%2C%22desc%22%3A%22%E6%84%9F%E8%A7%89%22%2C%22bindingdata%22%3A%5B%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E5%BE%88%E5%A5%BD%22%2C%20%22value%22%3A%201%20%7D%2C%20%7B%20%22label%22%3A%20%22%E6%84%9F%E8%A7%89%E4%B8%80%E8%88%AC%22%2C%20%22value%22%3A%202%20%7D%5D%7D"
-            bindingdata='[{ "label": "感觉很好", "value": 1 }, { "label": "感觉一般", "value": 2 }]'
-            contenteditable="false"><span contenteditable="true" sde-left="[" sde-right="]" class="sde-value"><label
-        contenteditable="false"><input type="radio" name="radio_33" value='{ "label": "感觉很好", "value": 1 }'>感觉很好</label>
-          <label contenteditable="false"><input type="radio" name="radio_33" value='{ "label": "感觉一般", "value": 2 }'>感觉一般</label>
-        </span></span>
-      fad异步：<span id="gj1" sde-right="." sde-type="radio"
-                  sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22required%22%3A0%2C%22multi%22%3A1%2C%22desc%22%3A%22%E6%84%9F%E8%A7%89%22%2C%22bindingdata%22%3A%5B%5D%2C%22remotedata%22%3A%7B%22url%22%3A%22%2Fdata%2Ffeel.json%22%2C%22method%22%3A%22get%22%2C%22headers%22%3A%7B%7D%2C%22data%22%3A%7B%7D%7D%7D"
-                  class="sde-ctrl" contenteditable="false"><span contenteditable="true" sde-left="[" sde-right="]"
-                                                                 class="sde-value"></span></span>sf阿dfa
-      adfa打发sfadsf阿sfadsf阿斯df阿sfadsf阿斯dfa
-      <span class="sde-ctrl" sde-type="text" sde-right="." id="abc1"
-            sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22verify%22%3A%22%5E%5B0-9%5D*%24%22%2C%22required%22%3A0%2C%22desc%22%3A%22%E6%95%B4%E6%95%B0%E6%8E%A7%E4%BB%B6%22%2C%22remotedata%22%3A%7B%22url%22%3A%22%2Fdata%2Fjson1.json%22%2C%22method%22%3A%22get%22%2C%22data%22%3A%7B%22name%22%3A%22tl%22%7D%7D%7D"
-            contenteditable="false"><span class="sde-value" sde-left="[" sde-right="]"
-                                          contenteditable="true">整数控件</span>
-        </span>
-      sd啊斯顿adf文档节：
-      <div class="sde-ctrl sde-section" contenteditable="false" sde-type="section" id="section1"
-           sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22originalmode%22%3A%22EDITOR%22%7D">
-        <p contenteditable="true" class="sde-value">区域控件阿斯dfa
-          <span class="sde-ctrl" sde-type="text" sde-right="." id="abc1"
-                sde-model="%7B%22mode%22%3A%22EDITOR%22%2C%22notdel%22%3A0%2C%22strictverify%22%3A0%2C%22verify%22%3A%22%5E%5B0-9%5D*%24%22%2C%22required%22%3A0%2C%22desc%22%3A%22%E6%95%B4%E6%95%B0%E6%8E%A7%E4%BB%B6%22%2C%22remotedata%22%3A%7B%22url%22%3A%22%2Fdata%2Fjson1.json%22%2C%22method%22%3A%22get%22%2C%22data%22%3A%7B%22name%22%3A%22tl%22%7D%7D%7D"
-                contenteditable="false"><span class="sde-value" sde-left="[" sde-right="]"
-                                              contenteditable="true">整数控件</span>
-            </span>
-          sd啊斯区域 控件！！！
-        </p>
+      <p style="line-height: normal; margin-top: 5px; text-align: left;">基本信息</p>
+      <p><span style="font-size: 16px;"></span></p><span style="font-size: 12px;"></span><span
+      style="font-size: 12px;"></span>
+      <p></p>
+      <p style="line-height: normal; margin-top: 5px; text-align: left;"><span style="font-size: 24px;"></span></p>
+      <p><span style="font-size: 16px;"></span></p>
+      <table class="sde-table">
+        <tbody>
+        <tr class="firstRow">
+          <td width="70" valign="top" style="word-break: break-all;">门诊号：</td>
+          <td width="90" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+        </tr>
+        <tr>
+          <td width="70" valign="top"><br></td>
+          <td width="90" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+          <td width="80" valign="top"><br></td>
+        </tr>
+        </tbody>
+      </table>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>换行<br/>
+      <div class="sde-assistant-popup" contenteditable="false">
+        <div class="assistant-popup-body"></div>
       </div>
-      adsfasdfaad打发<span class="sde-revise"><span class="sde-revise-add">新增批注</span></span>阿斯 顿发
-      <span class="sde-revise"><span class="sde-revise-del">删除批注</span></span>阿发 发打fa
-      </p>
     </div>
   </div>
 </template>
@@ -134,12 +114,13 @@
       console.log('sde components created.');
     },
     mounted() {
+      // debugger
       //alert('新增扩展toolbar示例，详见sdeEditor.vue组件!');
       this.sde = new SDE({
         el: this.$refs.editor,
         iframe_css_src: null, //string/Array数组 扩展css
         iframe_js_src: null, //string/Array数组 扩展js
-        page_start_num: 6, //页面起始页//默认为1
+        page_start_num: 1, //页面起始页//默认为1
         ctrl_remote_handle: function (data) {
           //这里可以处理url，对url进行再加工。如果此时执行 this.isLoadAsyncData(true)，则表示代替sde自带的异步请求方法，
           //场景1，二次处理发起异步请求前的参数设置，比如因模板打开路径不同，导致的控件中的url路径不对的问题；
@@ -301,6 +282,9 @@
             items: [{
               name: 'pagebreak',
               title: '分页符'
+            },{
+              name: 'horizontal',
+              title: '分割线'
             }]
           }, {
             name: 'sde-toolbar-insert-spechars',

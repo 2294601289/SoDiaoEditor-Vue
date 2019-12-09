@@ -11,8 +11,12 @@
    * 因此，UEditor提供了针对不同页面的编辑器可单独配置的根路径，具体来说，在需要实例化编辑器的页面最顶部写上如下代码即可。当然，需要令此处的URL等于对应的配置。
    * window.UEDITOR_HOME_URL = "/xxxx/xxxx/"
    */
-  var URL = window.UEDITOR_HOME_URL || getUEBasePath();
+  // 服务根路径
+  var UEBasePathURL = getUEBasePath();
+  // sdeEditor根路径
+  var URL = window.UEDITOR_HOME_URL || UEBasePathURL;
   // console.log('==>' + URL)
+  // 指向sdeEditor根路径
   if (URL.endsWith('static/sdeEditor/')) {
   } else {
     URL = URL + 'static/sdeEditor/';
@@ -183,23 +187,21 @@
     //   ]
     // ]
   };
-
+  // 获取服务路径
   function getUEBasePath(docUrl, confUrl) {
     return getBasePath(
       docUrl || self.document.URL || self.location.href,
       confUrl || getConfigFilePath()
     );
   }
-
+  // 获取最后一个引入script脚本的引入路径（在vue中，最后一个是http://localhost:8081/app.js）
   function getConfigFilePath() {
     var configPath = document.getElementsByTagName('script');
-
     return configPath[configPath.length - 1].src;
   }
-
+  // 去除路径中的文件名和特殊符号，返回服务路径
   function getBasePath(docUrl, confUrl) {
     var basePath = confUrl;
-
     if (/^(\/|\\\\)/.test(confUrl)) {
       basePath = /^.+?\w(\/|\\\\)/.exec(docUrl)[0] + confUrl.replace(/^(\/|\\\\)/, '');
     } else if (!/^[a-z]+:/i.test(confUrl)) {
@@ -207,27 +209,21 @@
         .split('#')[0]
         .split('?')[0]
         .replace(/[^\\\/]+$/, '');
-
       basePath = docUrl + '' + confUrl;
     }
-
     return optimizationPath(basePath);
   }
-
+  // 去除路径中的文件名和特殊符号，返回服务路径
   function optimizationPath(path) {
     var protocol = /^[a-z]+:\/\//.exec(path)[0],
       tmp = null,
       res = [];
-
     path = path
       .replace(protocol, '')
       .split('?')[0]
       .split('#')[0];
-
     path = path.replace(/\\/g, '/').split(/\//);
-
     path[path.length - 1] = '';
-
     while (path.length) {
       if ((tmp = path.shift()) === '..') {
         res.pop();
@@ -235,11 +231,10 @@
         res.push(tmp);
       }
     }
-
     return protocol + res.join('/');
   }
 
   window.UE = {
-    getUEBasePath: getUEBasePath,
+    getUEBasePath: UEBasePathURL,
   };
 })();

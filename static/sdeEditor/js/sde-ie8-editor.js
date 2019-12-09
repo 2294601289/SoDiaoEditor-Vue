@@ -23,6 +23,8 @@
   }, t.o = function (e, t) {
     return Object.prototype.hasOwnProperty.call(e, t)
   }, t.p = "", t(t.s = 484)
+  console.log('+++++++++++++++++')
+  console.log(t)
 }([function (e, t, n) {
   (function (e) {
     !function (t, n) {
